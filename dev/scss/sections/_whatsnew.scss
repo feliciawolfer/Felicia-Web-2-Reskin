@@ -1,0 +1,87 @@
+/* =============
+   Whats New
+============= */
+
+.whats new{
+
+    .whats-new-articles{
+
+        @include md{
+            display: grid;
+            grid-template-columns: 15px auto 15px;
+            grid-template-areas: ".articles."
+        }
+
+        @include xl{
+            grid-template-columns: auto 1140px auto;
+        }
+
+        .article-grid{
+            display: grid;
+            grid-template-columns: 100%;
+            gap:15px;
+
+            @include md{
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                grid-area: articles;
+
+                grid-template-areas:
+                "a1 a1 a2 a2"
+                "a3 a3 a4 a4"
+                ". a5 a5 .";
+            }
+
+            @include lg{
+                grid-template-columns: repeat(6);
+                grid-template-areas:
+                "a1 a1 a2 a2 a3 a3"
+                ". a4 a4 a5 a5 ."
+            }
+
+            article{
+
+                img{
+                    width: 100%;
+                    display: block;
+                }
+            }
+            
+
+            &.article-1{
+                @include md{
+                    grid-area: a1;
+                }
+            }
+
+            &.article-2{
+                @include md{
+                    grid-area: a2;
+                }
+            }
+           
+            &.article-3{
+                @include md{
+                    grid-area: a3;
+                }
+            }
+
+            &.article-4{
+                @include md{
+                    grid-area: a4;
+                }
+            }
+
+            &.article-5{
+                @include md{
+                    grid-area: a5;
+                }
+            }
+
+
+
+        }
+
+
+    }
+}

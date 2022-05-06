@@ -1,0 +1,34 @@
+/* =============
+    Footer
+============= */
+
+footer{
+    background-color: $  ;
+    color:  ;
+
+    .content{
+        display: grid;
+        grid-template-columns: 100%;
+
+        @include md{
+            display: grid;
+            Grid-template-columns: 50% auto;
+            grid-template-areas:
+            "locations newsletter"
+            "locations social"
+        }
+
+        @include lg{
+            grid-template-columns: repeate (3, 1fr);
+            grid-template-areas:
+            "locations newsletter socail";
+        }
+
+        .locations, .follow{
+            ul{
+                list-style: none;
+                padding:0;
+            }
+        }
+    }
+}

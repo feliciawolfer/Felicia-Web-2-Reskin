@@ -1,0 +1,33 @@
+/* =============
+    hero
+============= */
+
+.hero{
+
+    img{
+        width: 100%
+        display: block;
+
+    }
+
+    .hero-content{
+        display: grid;
+        grid-template-columns: 100%;
+
+        @include md {
+            grid-template-columns: 50% auto;
+        }
+
+        .sub-content-left{
+            background-color: $ ;
+
+            @include xl{
+                grid-template-columns: auto auto 16px;
+            }
+        }
+
+        .sub-content-right{
+            background-color: $  ;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+/* =============
+    Divider
+============= */
+
+.divider[
+
+    .content{
+        display: grid;
+        grid-template-columns: 100%
+        gap: 15px;
+
+        @include md {
+            grid-template-columns: 50% auto
+        }
+
+        .sub-content{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-areas:
+            "h2 image"
+            "button image"
+        }
+    }
+]
